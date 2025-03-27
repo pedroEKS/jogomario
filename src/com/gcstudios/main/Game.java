@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import javax.swing.JFrame;
-
-
 import com.gcstudios.entities.Entity;
 import com.gcstudios.entities.Player;
 import com.gcstudios.graficos.Spritesheet;
@@ -63,7 +61,7 @@ public class Game extends Canvas implements Runnable,KeyListener,MouseListener,M
 	}
 	
 	public void initFrame(){
-		frame = new JFrame("Super Mário");
+		frame = new JFrame("Super MÃ¡rio");
 		frame.add(this);
 		frame.setResizable(false);
 		frame.pack();
@@ -103,9 +101,6 @@ public class Game extends Canvas implements Runnable,KeyListener,MouseListener,M
 		
 	}
 	
-
-
-	
 	public void render(){
 		BufferStrategy bs = this.getBufferStrategy();
 		if(bs == null){
@@ -116,7 +111,7 @@ public class Game extends Canvas implements Runnable,KeyListener,MouseListener,M
 		g.setColor(new Color(122,102,255));
 		g.fillRect(0, 0,WIDTH,HEIGHT);
 		
-		/*Renderização do jogo*/
+		/*RenderizaÃ§Ã£o do jogo*/
 		//Graphics2D g2 = (Graphics2D) g;
 		world.render(g);
 		Collections.sort(entities,Entity.nodeSorter);
@@ -232,6 +227,4 @@ public class Game extends Canvas implements Runnable,KeyListener,MouseListener,M
 	public void mouseMoved(MouseEvent e) {
 	
 	}
-
-	
 }
